@@ -10,10 +10,12 @@ oos_merchants = st.number_input('Number of OOS & duplicate merchants', min_value
 even_distribution = st.checkbox('Even distribution of large, medium, & small merchants')
 
 if even_distribution:
-    large_merchants = 0
-    medium_merchants = 0
-    small_merchants = 0
     total_non_oos_merchants = st.number_input('Total number of non-OOS merchants', min_value=0, value=0)
+    
+    # Evenly distribute across large, medium, and small merchants
+    large_merchants = total_non_oos_merchants // 3
+    medium_merchants = total_non_oos_merchants // 3
+    small_merchants = total_non_oos_merchants - (large_merchants + medium_merchants)  # Remaining merchants go to small
 else:
     large_merchants = st.number_input('Number of large merchants', min_value=0, value=0)
     medium_merchants = st.number_input('Number of medium merchants', min_value=0, value=0)

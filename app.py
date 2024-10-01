@@ -130,4 +130,6 @@ with tab2:
         total_sum += step4_sum
 
     # Step 5 Tasks
-    with st.expander("
+    with st.expander("5. Task Steps Group 5"):
+        step5_sum = 0
+        step5_sum += st.number_input("5.1. Final Review", min_value=0,

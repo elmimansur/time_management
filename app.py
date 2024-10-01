@@ -68,7 +68,7 @@ with tab1:
     st.subheader("Total Time Cost")
     st.write(f"Total cost in minutes: {total_cost}")
 
-# Tab 2: Task Steps - Manually create the toggle list for tasks
+# Tab 2: Task Steps with calculated sums displayed
 with tab2:
     st.subheader("Task Steps")
 
@@ -85,7 +85,8 @@ with tab2:
     step1_sum += st.number_input("1.9. Split existing merchants into reviewed and not reviewed", min_value=0, value=0)
     step1_sum += st.number_input("1.10. Check Existing merchant's last 'Reviewed At' date", min_value=0, value=0)
 
-    with st.expander(f"1. Data Reception & Filtering (Total: {step1_sum})"):
+    st.write(f"1. Data Reception & Filtering (Total: {step1_sum})")
+    with st.expander("1. Data Reception & Filtering"):
         st.write(f"Total for Step 1: {step1_sum}")
 
     # Step 2 Tasks
@@ -104,13 +105,15 @@ with tab2:
     step2_sum += st.number_input("2.12. Existing Merchants Scraping", min_value=0, value=0)
     step2_sum += st.number_input("2.13. Existing Merchants Documentation", min_value=0, value=0)
 
-    with st.expander(f"2. Data Coverage (Total: {step2_sum})"):
+    st.write(f"2. Data Coverage (Total: {step2_sum})")
+    with st.expander("2. Data Coverage"):
         st.write(f"Total for Step 2: {step2_sum}")
 
     # Step 3 Tasks
     step3_sum = st.number_input("3. Coverage Estimate/Checkpoint Analysis", min_value=0, value=0)
 
-    with st.expander(f"3. CHECK POINT – Coverage Estimate (Total: {step3_sum})"):
+    st.write(f"3. CHECK POINT – Coverage Estimate (Total: {step3_sum})")
+    with st.expander("3. CHECK POINT – Coverage Estimate"):
         st.write(f"Total for Step 3: {step3_sum}")
 
     # Step 4 Tasks
@@ -120,9 +123,11 @@ with tab2:
     step4_sum += st.number_input("4.1.3. Ratings: (B) 2nd Priority analysis (size S)", min_value=0, value=0)
     step4_sum += st.number_input("4.2.1. Ratings: (A) New merchants analysis (size M & L)", min_value=0, value=0)
     step4_sum += st.number_input("4.2.2. Ratings: (B) Existing merchants analysis (size M & L)", min_value=0, value=0)
+    step4_sum += st.number_input("4.2.3. Ratings: (B) 2nd Priority analysis (size M & L)", min_value=
     step4_sum += st.number_input("4.2.3. Ratings: (B) 2nd Priority analysis (size M & L)", min_value=0, value=0)
 
-    with st.expander(f"4. Ratings (Total: {step4_sum})"):
+    st.write(f"4. Ratings (Total: {step4_sum})")
+    with st.expander("4. Ratings"):
         st.write(f"Total for Step 4: {step4_sum}")
 
     # Step 5 Tasks
@@ -136,9 +141,10 @@ with tab2:
     step5_sum += st.number_input("5.7. Client Reporting", min_value=0, value=0)
     step5_sum += st.number_input("5.8. Continuous Monitoring", min_value=0, value=0)
 
-    with st.expander(f"5. Final Review & Metrics (Total: {step5_sum})"):
+    st.write(f"5. Final Review & Metrics (Total: {step5_sum})")
+    with st.expander("5. Final Review & Metrics"):
         st.write(f"Total for Step 5: {step5_sum}")
 
-    # Sum of all steps
+    # Grand total of all steps
     total_sum = step1_sum + step2_sum + step3_sum + step4_sum + step5_sum
     st.subheader(f"Grand Total for all steps: {total_sum}")

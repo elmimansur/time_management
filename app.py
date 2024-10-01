@@ -127,4 +127,14 @@ with tab2:
         step5_sum = 0
         step5_sum += st.number_input("5.1. Final Review", min_value=0, value=0)
         step5_sum += st.number_input("5.2. Performance Metrics", min_value=0, value=0)
-        step5_sum += st.number_input("5.3. Feedback Collection",
+        step5_sum += st.number_input("5.3. Feedback Collection", min_value=0, value=0)
+        step5_sum += st.number_input("5.4. Process Optimization", min_value=0, value=0)
+        step5_sum += st.number_input("5.5. Implementation of Improvements", min_value=0, value=0)
+        step5_sum += st.number_input("5.6. Documentation Update", min_value=0, value=0)
+        step5_sum += st.number_input("5.7. Client Reporting", min_value=0, value=0)
+        step5_sum += st.number_input("5.8. Continuous Monitoring", min_value=0, value=0)
+        st.write(f"Total for Step 5: {step5_sum}")
+
+    # Sum of all steps
+    total_sum = step1_sum + step2_sum + step3_sum + step4_sum + step5_sum
+    st.subheader(f"Grand Total for all steps: {total_sum}")

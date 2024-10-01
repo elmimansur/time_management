@@ -74,61 +74,75 @@ with tab2:
 
     # Step 1 Tasks
     step1_sum = 0
+    step1_sum += st.number_input("1.1. Create Summary page", min_value=0, value=0)
+    step1_sum += st.number_input("1.2. Deduplicate data", min_value=0, value=0)
+    step1_sum += st.number_input("1.3. Data Category filtering", min_value=0, value=0)
+    step1_sum += st.number_input("1.4. Cross-referencing: Fuzzy matching with AP", min_value=0, value=0)
+    step1_sum += st.number_input("1.5. Create Existing merchants and New merchants tables", min_value=0, value=0)
+    step1_sum += st.number_input("1.6. Review Fuzzy Matches", min_value=0, value=0)
+    step1_sum += st.number_input("1.7. Add non-approved fuzzy matches to New Merchants", min_value=0, value=0)
+    step1_sum += st.number_input("1.8. Create new tabs/sheets for each segment", min_value=0, value=0)
+    step1_sum += st.number_input("1.9. Split existing merchants into reviewed and not reviewed", min_value=0, value=0)
+    step1_sum += st.number_input("1.10. Check Existing merchant's last 'Reviewed At' date", min_value=0, value=0)
+
+    # Expander with total for step 1
     with st.expander(f"1. Data Reception & Filtering (Total: {step1_sum})", expanded=False):
-        step1_sum += st.number_input("1.1. Create Summary page", min_value=0, value=0)
-        step1_sum += st.number_input("1.2. Deduplicate data", min_value=0, value=0)
-        step1_sum += st.number_input("1.3. Data Category filtering", min_value=0, value=0)
-        step1_sum += st.number_input("1.4. Cross-referencing: Fuzzy matching with AP", min_value=0, value=0)
-        step1_sum += st.number_input("1.5. Create Existing merchants and New merchants tables", min_value=0, value=0)
-        step1_sum += st.number_input("1.6. Review Fuzzy Matches", min_value=0, value=0)
-        step1_sum += st.number_input("1.7. Add non-approved fuzzy matches to New Merchants", min_value=0, value=0)
-        step1_sum += st.number_input("1.8. Create new tabs/sheets for each segment", min_value=0, value=0)
-        step1_sum += st.number_input("1.9. Split existing merchants into reviewed and not reviewed", min_value=0, value=0)
-        step1_sum += st.number_input("1.10. Check Existing merchant's last 'Reviewed At' date", min_value=0, value=0)
+        st.write(f"Total for Step 1: {step1_sum}")
 
     # Step 2 Tasks
     step2_sum = 0
+    step2_sum += st.number_input("2.1. Profile Creation for New Merchants - Week 1", min_value=0, value=0)
+    step2_sum += st.number_input("2.2. Raise queries with Visa about merchants", min_value=0, value=0)
+    step2_sum += st.number_input("2.3. Profile Creation for New Merchants - Week 2", min_value=0, value=0)
+    step2_sum += st.number_input("2.4. New Merchants Confirm Entity", min_value=0, value=0)
+    step2_sum += st.number_input("2.5. New Merchants Prioritisation", min_value=0, value=0)
+    step2_sum += st.number_input("2.6. New Merchants Scraping", min_value=0, value=0)
+    step2_sum += st.number_input("2.7. New Merchants Order", min_value=0, value=0)
+    step2_sum += st.number_input("2.8. New Merchants Documentation", min_value=0, value=0)
+    step2_sum += st.number_input("2.9. Existing Merchants Category Matching", min_value=0, value=0)
+    step2_sum += st.number_input("2.10. Existing Merchants Prioritisation", min_value=0, value=0)
+    step2_sum += st.number_input("2.11. Existing Merchants Profile Review", min_value=0, value=0)
+    step2_sum += st.number_input("2.12. Existing Merchants Scraping", min_value=0, value=0)
+    step2_sum += st.number_input("2.13. Existing Merchants Documentation", min_value=0, value=0)
+
+    # Expander with total for step 2
     with st.expander(f"2. Data Coverage (Total: {step2_sum})", expanded=False):
-        step2_sum += st.number_input("2.1. Profile Creation for New Merchants - Week 1", min_value=0, value=0)
-        step2_sum += st.number_input("2.2. Raise queries with Visa about merchants", min_value=0, value=0)
-        step2_sum += st.number_input("2.3. Profile Creation for New Merchants - Week 2", min_value=0, value=0)
-        step2_sum += st.number_input("2.4. New Merchants Confirm Entity", min_value=0, value=0)
-        step2_sum += st.number_input("2.5. New Merchants Prioritisation", min_value=0, value=0)
-        step2_sum += st.number_input("2.6. New Merchants Scraping", min_value=0, value=0)
-        step2_sum += st.number_input("2.7. New Merchants Order", min_value=0, value=0)
-        step2_sum += st.number_input("2.8. New Merchants Documentation", min_value=0, value=0)
-        step2_sum += st.number_input("2.9. Existing Merchants Category Matching", min_value=0, value=0)
-        step2_sum += st.number_input("2.10. Existing Merchants Prioritisation", min_value=0, value=0)
-        step2_sum += st.number_input("2.11. Existing Merchants Profile Review", min_value=0, value=0)
-        step2_sum += st.number_input("2.12. Existing Merchants Scraping", min_value=0, value=0)
-        step2_sum += st.number_input("2.13. Existing Merchants Documentation", min_value=0, value=0)
+        st.write(f"Total for Step 2: {step2_sum}")
 
     # Step 3 Tasks
-    step3_sum = 0
+    step3_sum = st.number_input("3. Coverage Estimate/Checkpoint Analysis", min_value=0, value=0)
+
+    # Expander with total for step 3
     with st.expander(f"3. CHECK POINT – Coverage Estimate (Total: {step3_sum})", expanded=False):
-        step3_sum += st.number_input("3. Coverage Estimate/Checkpoint Analysis", min_value=0, value=0)
+        st.write(f"Total for Step 3: {step3_sum}")
 
     # Step 4 Tasks
     step4_sum = 0
+    step4_sum += st.number_input("4.1.1. Ratings: (A) New merchants analysis (size S)", min_value=0, value=0)
+    step4_sum += st.number_input("4.1.2. Ratings: (B) Existing merchants analysis (size S)", min_value=0, value=0)
+    step4_sum += st.number_input("4.1.3. Ratings: (B) 2nd Priority analysis (size S)", min_value=0, value=0)
+    step4_sum += st.number_input("4.2.1. Ratings: (A) New merchants analysis (size M & L)", min_value=0, value=0)
+    step4_sum += st.number_input("4.2.2. Ratings: (B) Existing merchants analysis (size M & L)", min_value=0, value=0)
+    step4_sum += st.number_input("4.2.3. Ratings: (B) 2nd Priority analysis (size M & L)", min_value=0, value=0)
+
+    # Expander with total for step 4
     with st.expander(f"4. Ratings (Total: {step4_sum})", expanded=False):
-        step4_sum += st.number_input("4.1.1. Ratings: (A) New merchants analysis (size S)", min_value=0, value=0)
-        step4_sum += st.number_input("4.1.2. Ratings: (B) Existing merchants analysis (size S)", min_value=0, value=0)
-        step4_sum += st.number_input("4.1.3. Ratings: (B) 2nd Priority analysis (size S)", min_value=0, value=0)
-        step4_sum += st.number_input("4.2.1. Ratings: (A) New merchants analysis (size M & L)", min_value=0, value=0)
-        step4_sum += st.number_input("4.2.2. Ratings: (B) Existing merchants analysis (size M & L)", min_value=0, value=0)
-        step4_sum += st.number_input("4.2.3. Ratings: (B) 2nd Priority analysis (size M & L)", min_value=0, value=0)
+        st.write(f"Total for Step 4: {step4_sum}")
 
     # Step 5 Tasks
     step5_sum = 0
+    step5_sum += st.number_input("5.1. Final Review", min_value=0, value=0)
+    step5_sum += st.number_input("5.2. Performance Metrics", min_value=0, value=0)
+    step5_sum += st.number_input("5.3. Feedback Collection", min_value=0, value=0)
+    step5_sum += st.number_input("5.4. Process Optimization", min_value=0, value=0)
+    step5_sum += st.number_input("5.5. Implementation of Improvements", min_value=0, value=0)
+    step5_sum += st.number_input("5.6. Documentation Update", min_value=0, value=0)
+    step5_sum += st.number_input("5.7. Client Reporting", min_value=0, value=0)
+    step5_sum += st.number_input("5.8. Continuous Monitoring", min_value=0, value=0)
+
+    # Expander with total for step 5
     with st.expander(f"5. Final Review & Metrics (Total: {step5_sum})", expanded=False):
-        step5_sum += st.number_input("5.1. Final Review", min_value=0, value=0)
-        step5_sum += st.number_input("5.2. Performance Metrics", min_value=0, value=0)
-        step5_sum += st.number_input("5.3. Feedback Collection", min_value=0, value=0)
-        step5_sum += st.number_input("5.4. Process Optimization", min_value=0, value=0)
-        step5_sum += st.number_input("5.5. Implementation of Improvements", min_value=0, value=0)
-        step5_sum += st.number_input("5.6. Documentation Update", min_value=0, value=0)
-        step5_sum += st.number_input("5.7. Client Reporting", min_value=0, value=0)
-        step5_sum += st.number_input("5.8. Continuous Monitoring", min_value=0, value=0)
+        st.write(f"Total for Step 5: {step5_sum}")
 
     # Grand total of all steps
     total_sum = step1_sum + step2_sum + step3_sum + step4_sum + step5_sum

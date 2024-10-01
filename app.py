@@ -123,7 +123,7 @@ with tab2:
     step4_sum += st.number_input("4.1.3. Ratings: (B) 2nd Priority analysis (size S)", min_value=0, value=0)
     step4_sum += st.number_input("4.2.1. Ratings: (A) New merchants analysis (size M & L)", min_value=0, value=0)
     step4_sum += st.number_input("4.2.2. Ratings: (B) Existing merchants analysis (size M & L)", min_value=0, value=0)
-    step4_sum += st.number_input("4.2.3. Ratings: (B) 2nd Priority analysis (size M & L)", min_value=
+    step4_sum += st.number_input("4.2.3. Ratings: (B) 2nd Priority analysis (size M & L)", min_value=0, value=0)
     step4_sum += st.number_input("4.2.3. Ratings: (B) 2nd Priority analysis (size M & L)", min_value=0, value=0)
 
     st.write(f"4. Ratings (Total: {step4_sum})")

@@ -68,12 +68,9 @@ with tab1:
     st.subheader("Total Time Cost")
     st.write(f"Total cost in minutes: {total_cost}")
 
-# Tab 2: Task Steps - Manually create the toggle list for tasks with user inputs
+# Tab 2: Task Steps - Manually create the toggle list for tasks
 with tab2:
     st.subheader("Task Steps")
-
-    # Initialize a total sum variable
-    total_sum = 0
 
     # Step 1 Tasks
     with st.expander("1. Task Steps Group 1"):
@@ -89,7 +86,6 @@ with tab2:
         step1_sum += st.number_input("1.9. Split existing merchants into reviewed and not reviewed", min_value=0, value=0)
         step1_sum += st.number_input("1.10. Check Existing merchant's last 'Reviewed At' date", min_value=0, value=0)
         st.write(f"Total for Step 1: {step1_sum}")
-        total_sum += step1_sum
 
     # Step 2 Tasks
     with st.expander("2. Task Steps Group 2"):
@@ -108,14 +104,12 @@ with tab2:
         step2_sum += st.number_input("2.12. Existing Merchants Scraping", min_value=0, value=0)
         step2_sum += st.number_input("2.13. Existing Merchants Documentation", min_value=0, value=0)
         st.write(f"Total for Step 2: {step2_sum}")
-        total_sum += step2_sum
 
     # Step 3 Tasks
     with st.expander("3. Task Steps Group 3"):
         step3_sum = 0
         step3_sum += st.number_input("3. Coverage Estimate/Checkpoint Analysis", min_value=0, value=0)
         st.write(f"Total for Step 3: {step3_sum}")
-        total_sum += step3_sum
 
     # Step 4 Tasks
     with st.expander("4. Task Steps Group 4"):
@@ -127,9 +121,10 @@ with tab2:
         step4_sum += st.number_input("4.2.2. Ratings: (B) Existing merchants analysis (size M & L)", min_value=0, value=0)
         step4_sum += st.number_input("4.2.3. Ratings: (B) 2nd Priority analysis (size M & L)", min_value=0, value=0)
         st.write(f"Total for Step 4: {step4_sum}")
-        total_sum += step4_sum
 
     # Step 5 Tasks
     with st.expander("5. Task Steps Group 5"):
         step5_sum = 0
-        step5_sum += st.number_input("5.1. Final Review", min_value=0,
+        step5_sum += st.number_input("5.1. Final Review", min_value=0, value=0)
+        step5_sum += st.number_input("5.2. Performance Metrics", min_value=0, value=0)
+        step5_sum += st.number_input("5.3. Feedback Collection",

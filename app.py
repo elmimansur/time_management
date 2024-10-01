@@ -73,7 +73,7 @@ with tab2:
     st.subheader("Task Steps")
 
     # Step 1 Tasks
-    with st.expander("1. Task Steps Group 1"):
+    with st.expander("Data Reception & Filtering"):
         st.write("1.1. Create Summary page")
         st.write("1.2. Deduplicate data")
         st.write("1.3. Data Category filtering - Filter the merchants by categories.")
@@ -86,7 +86,7 @@ with tab2:
         st.write("1.10. Check Existing (reviewed) merchant's last 'Reviewed At' date")
 
     # Step 2 Tasks
-    with st.expander("2. Task Steps Group 2"):
+    with st.expander("Data Coverage"):
         st.write("2.1. Profile Creation for New Merchants - Week 1 (starting 11/09/2024)")
         st.write("2.2. Raise queries with Visa about merchants")
         st.write("2.3. Profile Creation for New Merchants - Week 2")
@@ -102,11 +102,11 @@ with tab2:
         st.write("2.13. Existing Merchants Documentation")
 
     # Step 3 Tasks
-    with st.expander("3. Task Steps Group 3"):
+    with st.expander("CHECK POINT – Coverage Estimate "):
         st.write("3. Coverage Estimate/Checkpoint Analysis - Analyse the number of companies we have in each category and size")
 
     # Step 4 Tasks
-    with st.expander("4. Task Steps Group 4"):
+    with st.expander("Ratings"):
         st.write("4.1.1. Ratings: (A) New merchants analysis (size S)")
         st.write("4.1.2. Ratings: (B) Existing merchants analysis (size S)")
         st.write("4.1.3. Ratings: (B) 2nd Priority analysis (size S)")
@@ -115,7 +115,7 @@ with tab2:
         st.write("4.2.3. Ratings: (B) 2nd Priority analysis (size M & L)")
 
     # Step 5 Tasks
-    with st.expander("5. Task Steps Group 5"):
+    with st.expander("Process Conclusion and Continuous Improvement"):
         st.write("5.1. Final Review")
         st.write("5.2. Performance Metrics")
         st.write("5.3. Feedback Collection")
